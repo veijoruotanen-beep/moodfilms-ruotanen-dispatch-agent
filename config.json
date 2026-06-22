@@ -1,0 +1,21 @@
+{
+  "version": "3.0.0",
+  "mode": "ruotanen_dispatch_hub",
+  "indexnow_endpoint": "https://api.indexnow.org/indexnow",
+  "indexnow": {
+    "host": "ruotanen.com",
+    "key": "moodfilms-ruotanen-2026-indexnow-key",
+    "keyLocation": "https://ruotanen.com/indexnow-key.txt"
+  },
+  "dispatch_base_url": "https://ruotanen.com/dispatch/moodfilms",
+  "moodfilms": {
+    "site": "https://www.moodfilms.com/",
+    "name": "Moodfilms",
+    "description": "Moodfilmsin videotuotanto, valokuvaus, ilmakuvaus, lehtikuvaus ja visuaalinen tuotanto Lahdessa ja Päijät-Hämeessä.",
+    "contact": "veijo.ruotanen@moodfilms.com"
+  },
+  "ruotanen": {
+    "site": "https://ruotanen.com/",
+    "name": "Veijo Ruotanen / Wexi"
+  }
+}

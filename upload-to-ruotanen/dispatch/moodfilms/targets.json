@@ -1,0 +1,14 @@
+{
+  "name": "Moodfilms target URLs",
+  "generated": "2026-06-22T10:20:40Z",
+  "note": "These are Moodfilms URLs referenced by the ruotanen.com dispatch hub. Because Moodfilms is hosted on Webnode, IndexNow is submitted for ruotanen.com dispatch URLs, while these target URLs are for manual Bing/Search Console checks and automation drafts.",
+  "urls": [
+    "https://www.moodfilms.com/videotuotanto/",
+    "https://www.moodfilms.com/",
+    "https://www.moodfilms.com/valokuvaus/",
+    "https://www.moodfilms.com/lehtikuvaus/",
+    "https://www.moodfilms.com/ilmakuvaus/",
+    "https://www.moodfilms.com/360-kuvaus/",
+    "https://www.moodfilms.com/yhteydenotto/"
+  ]
+}

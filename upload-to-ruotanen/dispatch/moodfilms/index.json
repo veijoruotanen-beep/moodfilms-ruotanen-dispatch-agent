@@ -1,0 +1,35 @@
+{
+  "name": "Moodfilms dispatch hub",
+  "generated": "2026-06-22T10:20:40Z",
+  "purpose": "Machine-readable dispatch hub for Moodfilms updates. Moodfilms is hosted on Webnode; ruotanen.com acts as the technical update feed and AI/search discovery layer.",
+  "moodfilms": {
+    "site": "https://www.moodfilms.com/",
+    "name": "Moodfilms",
+    "description": "Moodfilmsin videotuotanto, valokuvaus, ilmakuvaus, lehtikuvaus ja visuaalinen tuotanto Lahdessa ja Päijät-Hämeessä.",
+    "contact": "veijo.ruotanen@moodfilms.com"
+  },
+  "ruotanen_dispatch_base_url": "https://ruotanen.com/dispatch/moodfilms",
+  "feeds": {
+    "rss": "https://ruotanen.com/dispatch/moodfilms/feed.xml",
+    "updates": "https://ruotanen.com/dispatch/moodfilms/updates.json",
+    "targets": "https://ruotanen.com/dispatch/moodfilms/targets.json",
+    "latest": "https://ruotanen.com/dispatch/moodfilms/latest.md"
+  },
+  "latest_update": {
+    "date": "2026-06-22",
+    "type": "service_page_update",
+    "title": "Videotuotanto Lahti & Päijät-Häme",
+    "url": "https://www.moodfilms.com/videotuotanto/",
+    "summary": "Moodfilms tekee yritysvideoita, haastatteluvideoita, tapahtumavideoita ja dokumentaarista videokuvausta Lahdessa ja Päijät-Hämeessä.",
+    "tags": [
+      "videotuotanto Lahti",
+      "videokuvaus Lahti",
+      "yritysvideo",
+      "tapahtumavideo",
+      "Päijät-Häme"
+    ],
+    "local_signal": true,
+    "gbp_draft": true,
+    "linkedin_draft": true
+  }
+}

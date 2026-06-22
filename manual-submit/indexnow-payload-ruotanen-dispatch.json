@@ -1,0 +1,12 @@
+{
+  "host": "ruotanen.com",
+  "key": "moodfilms-ruotanen-2026-indexnow-key",
+  "keyLocation": "https://ruotanen.com/indexnow-key.txt",
+  "urlList": [
+    "https://ruotanen.com/dispatch/moodfilms/feed.xml",
+    "https://ruotanen.com/dispatch/moodfilms/updates.json",
+    "https://ruotanen.com/dispatch/moodfilms/index.json",
+    "https://ruotanen.com/dispatch/moodfilms/targets.json",
+    "https://ruotanen.com/dispatch/moodfilms/latest.md"
+  ]
+}
