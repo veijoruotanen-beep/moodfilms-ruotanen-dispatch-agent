@@ -1,0 +1,83 @@
+name: Dispatch Agent
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: "Title"
+        required: true
+        type: string
+      url:
+        description: "Moodfilms URL"
+        required: true
+        type: string
+      summary:
+        description: "Short summary"
+        required: true
+        type: string
+      tags:
+        description: "Tags, comma-separated"
+        required: false
+        type: string
+      type:
+        description: "Update type"
+        required: false
+        default: "update"
+        type: string
+      submit_indexnow:
+        description: "Submit IndexNow for ruotanen.com dispatch URLs"
+        required: false
+        default: false
+        type: boolean
+
+  push:
+    paths:
+      - "data/changes.json"
+      - "config.json"
+      - "scripts/dispatch-agent.py"
+
+jobs:
+  build-dispatch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Add workflow_dispatch update
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          python scripts/dispatch-agent.py add \
+            --type "${{ inputs.type }}" \
+            --title "${{ inputs.title }}" \
+            --url "${{ inputs.url }}" \
+            --summary "${{ inputs.summary }}" \
+            --tags "${{ inputs.tags }}" \
+            --local-signal \
+            --gbp-draft \
+            --linkedin-draft
+
+      - name: Generate dispatch files
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.submit_indexnow }}" = "true" ]; then
+            python scripts/dispatch-agent.py generate --submit
+          else
+            python scripts/dispatch-agent.py generate
+          fi
+
+      - name: Upload generated dispatch artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: moodfilms-ruotanen-dispatch-output
+          path: |
+            upload-to-ruotanen/
+            webnode-header-snippets/
+            manual-submit/
+            drafts/
